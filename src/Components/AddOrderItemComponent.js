@@ -13,7 +13,8 @@ class AddOrderItemComponent extends Component {
         super(props);
 
         this.state = {
-            title: ''
+            title: '',
+            count: 0
         };
     }
 
@@ -21,8 +22,10 @@ class AddOrderItemComponent extends Component {
      *
      * @private
      */
-    _handleTitleChange() {
-
+    _handleTitleChange(event) {
+        this.setState({
+            title: event.target.value
+        });
     }
 
     /**
@@ -30,7 +33,7 @@ class AddOrderItemComponent extends Component {
      * @private
      */
     _handleAddNewItem() {
-
+        this.props.handleItemsUpdate(this.state);
     }
 
     render() {
@@ -42,3 +45,5 @@ class AddOrderItemComponent extends Component {
         );
     }
 }
+
+export default AddOrderItemComponent;

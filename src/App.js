@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
-import OrderItem from './order-item/index'
+import OrderContainer from './Containers/OrderContainer'
 
 class App extends Component {
 
   render() {
     return (
       <div>
-          <OrderItem />
+          <OrderContainer />
       </div>
     );
   }
