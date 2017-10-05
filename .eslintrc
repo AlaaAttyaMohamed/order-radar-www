@@ -15,8 +15,5 @@
     "ecmaFeatures": {
       "jsx": true
     }
-  },
-  "rules" : {
-    "radix": false
   }
 }
