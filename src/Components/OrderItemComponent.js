@@ -22,6 +22,7 @@ class OrderItemComponent extends Component {
     /**
      *
      * @private
+     * @author Alaa Attya <alaa.attya@tajawal.com>
      */
     _decrement() {
         if (this.state.count !== 0) {
@@ -34,6 +35,7 @@ class OrderItemComponent extends Component {
     /**
      *
      * @private
+     * @author Alaa Attya <alaa.attya@tajawal.com>
      */
     _increment() {
         this.setState({
@@ -44,6 +46,7 @@ class OrderItemComponent extends Component {
     /**
      *
      * @return {XML}
+     * @author Alaa Attya <alaa.attya@tajawal.com>
      */
     render() {
         return (

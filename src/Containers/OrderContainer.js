@@ -31,7 +31,6 @@ class OrderContainer extends Component {
     _renderItems() {
         let items = [];
         for(let i=0; i<this.state.items.length; i++) {
-            console.log(this.state.items);
             items.push(<OrderItemComponent key={i} title={this.state.items[i].title} count={this.state.items[i].count} />);
         }
         return items;

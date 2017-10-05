@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
+import Textfield from '@react-mdc/textfield';
+import FAB from '@react-mdc/fab';
 
 /**
  * @author Alaa Attya <alaa.attya@tajawa.com>
@@ -8,6 +10,7 @@ class AddOrderItemComponent extends Component {
     /**
      *
      * @param props
+     * @author Alaa Attya <alaa.attya@tajawal.com>
      */
     constructor(props) {
         super(props);
@@ -21,6 +24,7 @@ class AddOrderItemComponent extends Component {
     /**
      *
      * @private
+     * @author Alaa Attya <alaa.attya@tajawal.com>
      */
     _handleTitleChange(event) {
         this.setState({
@@ -31,16 +35,29 @@ class AddOrderItemComponent extends Component {
     /**
      *
      * @private
+     * @author Alaa Attya <alaa.attya@tajawal.com>
      */
     _handleAddNewItem() {
-        this.props.handleItemsUpdate(this.state);
+        if(this.state.title !== '') {
+            this.props.handleItemsUpdate(this.state);
+        }
     }
 
     render() {
         return (
             <div>
-                <input type="text" onChange={this._handleTitleChange.bind(this)} />
-                <button onClick={this._handleAddNewItem.bind(this)}>add</button>
+                <Textfield>
+                    <Textfield.Input id="title" onChange={this._handleTitleChange.bind(this)} />
+                    <Textfield.Label htmlFor="title">
+                        Item title
+                    </Textfield.Label>
+                </Textfield>
+
+                <FAB onClick={this._handleAddNewItem.bind(this)}>
+                    Add
+                </FAB>
+
+
             </div>
         );
     }
