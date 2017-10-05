@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import AddOrderItemContainer from '../Components/AddOrderItemComponent';
 import OrderItemComponent from '../Components/OrderItemComponent';
-import OrderItem from "../order-item/index";
 
 /**
  * @author Alaa Attya <alaa.attya@tajawal.com>
