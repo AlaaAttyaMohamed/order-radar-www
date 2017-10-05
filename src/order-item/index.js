@@ -12,7 +12,7 @@ class OrderItem extends Component {
 
 
     subTotal() {
-        if (this.state.total != 0) {
+        if (this.state.total !== 0) {
             this.setState({
                 total: parseInt(this.state.total) - 1
             });
@@ -28,7 +28,7 @@ class OrderItem extends Component {
     render() {
         return (
             <div>
-                <b>Item</b> <button disabled={this.state.total == 0} onClick={this.subTotal.bind(this)}>-</button>{this.state.total}<button onClick={this.addTotal.bind(this)}>+</button>
+                <b>Item</b> <button disabled={this.state.total === 0} onClick={this.subTotal.bind(this)}>-</button>{this.state.total}<button onClick={this.addTotal.bind(this)}>+</button>
 
             </div>
         );
