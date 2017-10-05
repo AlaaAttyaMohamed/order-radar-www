@@ -14,14 +14,14 @@ class OrderItem extends Component {
     subTotal() {
         if (this.state.total !== 0) {
             this.setState({
-                total: parseInt(this.state.total) - 1
+                total: parseInt(this.state.total, 10) - 1
             });
         }
     }
 
     addTotal() {
         this.setState({
-            total: parseInt(this.state.total) + 1
+            total: parseInt(this.state.total, 100) + 1
         });
     }
 
