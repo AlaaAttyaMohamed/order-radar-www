@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import AddOrderItemContainer from '../Components/AddOrderItemComponent';
 import OrderItemComponent from '../Components/OrderItemComponent';
+import Grid, {Cell} from '@react-mdc/layout-grid';
 
 /**
  * @author Alaa Attya <alaa.attya@tajawal.com>
@@ -30,8 +31,9 @@ class OrderContainer extends Component {
      */
     _renderItems() {
         let items = [];
-        for(let i=0; i<this.state.items.length; i++) {
-            items.push(<OrderItemComponent key={i} title={this.state.items[i].title} count={this.state.items[i].count} />);
+        for (let i = 0; i < this.state.items.length; i++) {
+            items.push(<OrderItemComponent key={i} title={this.state.items[i].title}
+                                           count={this.state.items[i].count}/>);
         }
         return items;
     }
@@ -55,10 +57,15 @@ class OrderContainer extends Component {
      */
     render() {
         return (
-            <div>
-                <AddOrderItemContainer handleItemsUpdate={this._pushNewItem.bind(this)} />
-                {this._renderItems()}
-            </div>
+            <Grid>
+                <Grid.Cell col={4}>
+                </Grid.Cell>
+                <Grid.Cell col={4}>
+                    <AddOrderItemContainer handleItemsUpdate={this._pushNewItem.bind(this)}/>
+                    {this._renderItems()}
+                </Grid.Cell>
+                <Grid.Cell col={4}></Grid.Cell>
+            </Grid>
         );
     }
 }

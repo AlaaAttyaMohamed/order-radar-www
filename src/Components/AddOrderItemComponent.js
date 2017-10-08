@@ -56,8 +56,6 @@ class AddOrderItemComponent extends Component {
                 <FAB onClick={this._handleAddNewItem.bind(this)}>
                     Add
                 </FAB>
-
-
             </div>
         );
     }

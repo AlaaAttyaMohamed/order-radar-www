@@ -5,10 +5,13 @@
   "dependencies": {
     "@react-mdc/button": "^0.1.8",
     "@react-mdc/fab": "^0.1.9",
+    "@react-mdc/layout-grid": "^0.1.9",
     "@react-mdc/textfield": "^0.1.11",
+    "@react-mdc/toolbar": "^0.1.11",
     "material-components-web": "^0.22.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-fontawesome": "^1.6.1",
     "react-mdc": "^0.7.0",
     "react-mdl": "^1.10.3",
     "react-scripts": "1.0.14"

@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import FAB from '@react-mdc/fab';
+import FontAwesome from 'react-fontawesome';
 
 /**
  * @author Alaa Attya <alaa.attya@tajawal.com>
@@ -52,9 +54,13 @@ class OrderItemComponent extends Component {
         return (
             <div>
                 <b>{this.state.title}</b>
-                <button disabled={this.state.count === 0} onClick={this._decrement.bind(this)}>-</button>
+                <FAB mini disabled={this.state.count === 0} onClick={this._decrement.bind(this)}>
+                    <FontAwesome name="minus" />
+                </FAB>
                 {this.state.count}
-                <button onClick={this._increment.bind(this)}>+</button>
+                <FAB mini onClick={this._increment.bind(this)}>
+                    <FontAwesome name="plus" />
+                </FAB>
             </div>
         );
     }
